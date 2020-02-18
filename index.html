@@ -99,9 +99,21 @@
           </div>
 
           <div class="container form-container">
-            <div class="form-group">
-              <input id="search" type="text" pattern=".{3,}" required title="3 characters minimum" class="form-control" name="search" placeholder="Search any book"> 
+            <div class="input-group mb-3">
+              <input type="text" id="search" class="form-control" placeholder="Search any book" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-light" type="submit">Search</button>
+              </div>
+              <div class="invalid-tooltip">
+                Please introduce at least 3 letters.
+              </div>
             </div>
+            <!-- <div class="form-group">
+              <input id="search" type="text" required minlength="3" required title="Introduce at least 3 letters" class="form-control" name="search" placeholder="Search any book" required> 
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div> -->
           </div>  
         </section>
 
