@@ -45,21 +45,26 @@
                   <form>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
-                      <small id="emailHelp" class="form-text text-muted"></small>
+                      <input type="email" id="emailLog" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <div class="invalid-feedback">
+                        Introduce a valid E-mail please
+                      </div>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your surname">
+                      <label for="exampleInputPassword1">Password</label>  
+                      <input type="password" id="pswLog" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+                      <div class="invalid-feedback">
+                        Your password has to have at least 5 characters
+                      </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
                   </form> 
+                  <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Register login -->
+          <!--MODAL Register login -->
           <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content modal2 text-left">
@@ -67,17 +72,17 @@
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      <input type="email" id="emailReg" class="form-control" id="inputEmail4" placeholder="Email">
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">Choose a Password</label>
-                      <input type="password" class="form-control" id="inputPassword4" placeholder="Choose a Password">
+                      <input type="password" id="pswReg1" class="form-control" id="inputPassword4" placeholder="Choose a Password">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">Confirm Password</label>
-                      <input type="password" class="form-control" id="inputPassword4" placeholder="Confirm Password">
+                      <input type="password" id="pswReg2" class="form-control" id="inputPassword4" placeholder="Confirm Password">
                     </div>
                   </div>
                   <div class="form-row">
@@ -92,8 +97,8 @@
                       </select>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-primary">Register</button>
                 </form>
+                <button type="submit" class="btn btn-primary">Register</button>
               </div>
             </div>
           </div>
@@ -108,12 +113,6 @@
                 Please introduce at least 3 letters.
               </div>
             </div>
-            <!-- <div class="form-group">
-              <input id="search" type="text" required minlength="3" required title="Introduce at least 3 letters" class="form-control" name="search" placeholder="Search any book" required> 
-              <div class="invalid-feedback">
-                Please choose a username.
-              </div>
-            </div> -->
           </div>  
         </section>
 
