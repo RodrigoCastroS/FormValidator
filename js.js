@@ -14,6 +14,7 @@ let patt = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0
 
 // Cuando se suelte la primera tecla se ejecuta la funcion
 SEARCH.onkeyup =  letterCount; 
+
 // Cuando se hace click fuera del imput se ejecuta la funcion
 SEARCH.onblur = cleanSearchMsg;
 
@@ -32,36 +33,33 @@ function letterCount(){
 function cleanSearchMsg(){
     SEARCH.classList.remove("is-invalid");
 }
-// LOG IN
 
+
+// LOG IN
 function checkLog(){
-   
     emailValidator();
-    pswCount();
-    
-    function emailValidator(){   
-        if (patt.test(EMAIL.value)) {
-            EMAIL.classList.remove("is-invalid");
-            
-        }else{
-            EMAIL.classList.add("is-invalid");
-        }  
-    }
-    
-    function pswCount(){   
-        if (PASSWORD.value.length < 5 ) {
-            PASSWORD.classList.add("is-invalid");
-        }else{
-            PASSWORD.classList.remove("is-invalid");   
-        }
+    pswCount();    
+}
+
+function emailValidator(){   
+    if (patt.test(EMAIL.value)) {
+        EMAIL.classList.remove("is-invalid");
+        
+    }else{
+        EMAIL.classList.add("is-invalid");
+    }  
+}
+
+function pswCount(){   
+    if (PASSWORD.value.length < 5 ) {
+        PASSWORD.classList.add("is-invalid");
+    }else{
+        PASSWORD.classList.remove("is-invalid");   
     }
 }
     
     
-    
 // REGISTER FORM
-
-
 function checkReg(){
 
     emailValidatorReg();
